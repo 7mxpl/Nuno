@@ -1,4 +1,4 @@
-const channelId = "CHANNEL_ID";
+const channelId = "UCJ6Hx95RAjXplGcqnlLufzw";
 const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
 
 fetch(apiUrl)
