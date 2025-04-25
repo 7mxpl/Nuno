@@ -7,6 +7,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #fff;
+  text-align: center;
 }
 
 a {
@@ -14,10 +15,18 @@ a {
   color: #00ffcc;
   text-decoration: none;
   border-bottom: 2px dashed #00ffcc;
+  padding-bottom: 2px;
   transition: all 0.3s ease;
+  letter-spacing: 0.5px;
 }
 
 a:hover {
   color: #fff;
   border-bottom: 2px solid #fff;
+  transform: translateY(-2px);
+}
+
+a:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 255, 204, 0.5);
 }
