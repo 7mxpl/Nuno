@@ -6,12 +6,24 @@ fetch(apiUrl)
   .then(data => {
     if (data.status === "ok" && data.items && data.items.length > 0) {
       const video = data.items[0];
+
+      // Inhalte einfügen
       document.getElementById("videoTitle").textContent = video.title;
       document.getElementById("thumbnail").src = video.thumbnail;
       document.getElementById("videoLink").href = video.link;
-      document.getElementById("videoInfo").classList.remove("hidden");
 
-      // Countdown
+      // Video-Container einblenden und animieren
+      const videoInfo = document.getElementById("videoInfo");
+      videoInfo.classList.remove("hidden");
+
+      gsap.from(videoInfo, {
+        duration: 1,
+        opacity: 0,
+        y: 50,
+        ease: "power2.out"
+      });
+
+      // Countdown starten
       let count = 5;
       const counter = document.getElementById("countdown");
       const timer = setInterval(() => {
